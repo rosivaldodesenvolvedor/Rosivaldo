@@ -58,16 +58,15 @@ export default function Timeline() {
     },
   ];
 
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    threshold: 0.3,
-  });
-
   return (
     <section className={styles.timelineSection}>
       <h2 className={styles.title}>Linha do Tempo</h2>
       <div className={styles.timeline}>
         {timelineItems.map((item, index) => {
+          const { ref, inView } = useInView({
+            triggerOnce: false,
+            threshold: 0.3,
+          });
           const sideClass = styles[item.side];
           const animateClass = inView ? styles.animate : "";
 
