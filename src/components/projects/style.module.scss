@@ -1,0 +1,157 @@
+@use "../../styles/variables" as *;
+
+.projectsSection {
+  background: #0b0c10;
+  padding: 4rem 2rem;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    color: #fff;
+  }
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #1b1c20;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px $primary-color;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+.techs {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  color: #aaa;
+}
+
+.plusButton {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+  }
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #16161a;
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 25px $primary-color;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.modalImage {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  min-height: 300px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.modalContent {
+  padding: 2rem;
+  color: #eee;
+  width: 50%;
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: $primary-color;
+  cursor: pointer;
+}

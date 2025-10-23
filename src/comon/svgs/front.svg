@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" style="--icon-fill:#1e88e5; --accent:#6ec6ff;">
+  
+    SVG simplificado de um desenvolvedor + ícones flutuantes.
+    Para trocar a cor dos ícones troque a variável --icon-fill no atributo style:
+      <svg ... style="--icon-fill:#f7df1e">  <- exemplo amarelo JS
+    Cada ícone tem id: icon-js, icon-ts, icon-json, icon-node, icon-html, icon-sass,
+    icon-css, icon-react, icon-next, icon-frontend, icon-jest, icon-azure, icon-git
+  
+
+  <defs>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .bg { fill: none; }
+      .platform { fill: rgba(255,255,255,0.06); stroke: rgba(0,0,0,0.06); }
+      .desk { fill: white; opacity: 0.95; filter: url(#softGlow); }
+      .person-body { fill: #7FAEDB; }
+      .person-hair { fill: #264653; }
+      .laptop { fill: #eef2f8; stroke: #dbe7f6; stroke-width: 2; }
+      .screen-pattern { fill: none; stroke: #7b61ff; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; opacity:0.95; }
+      .cup { fill: #ffffff; stroke: #d0d6e0; stroke-width:1.5; }
+      .icon-rect { rx:18; ry:18; fill: var(--icon-fill); filter: none; }
+      .icon-text { font-family: Arial, Helvetica, sans-serif; font-weight:700; font-size:28px; fill: white; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+      .small { font-size:20px; }
+      .label { font-family: Arial, Helvetica, sans-serif; font-size:14px; fill:#cfe8ff; }
+      .floating { filter: url(#softGlow); opacity:0.98; }
+    </style>
+  </defs>
+
+   Transparent background clear 
+  <rect class="bg" width="1200" height="900"/>
+
+   Circular platform 
+  <g transform="translate(600,520)">
+    <ellipse cx="0" cy="0" rx="360" ry="140" fill="white" opacity="0.08"/>
+    <ellipse cx="0" cy="-6" rx="300" ry="80" fill="white" opacity="0.04"/>
+  </g>
+
+   Desk and laptop / objects 
+  <g transform="translate(350,300)">
+     desk 
+    <rect x="0" y="200" width="500" height="12" class="desk" rx="8"/>
+    <rect x="30" y="70" width="440" height="150" class="desk" rx="10" />
+     laptop 
+    <g transform="translate(120,85)">
+      <rect x="0" y="10" width="260" height="120" class="laptop" rx="8"/>
+      <rect x="10" y="18" width="240" height="80" fill="#ffffff" rx="4"/>
+       screen code pattern 
+      <g transform="translate(20,25)">
+        <rect width="200" height="56" fill="#ffffff" rx="3" />
+        <path class="screen-pattern" d="M8 12h24M8 24h34M8 36h18M78 12h36M78 24h36M78 36h36" />
+      </g>
+       keyboard 
+      <rect x="10" y="86" width="240" height="18" fill="#e6edf8" rx="3"/>
+    </g>
+
+     cup 
+    <g transform="translate(420,110)">
+      <ellipse cx="0" cy="0" rx="18" ry="6" fill="#fff"/>
+      <rect x="-18" y="0" width="36" height="28" class="cup" rx="8"/>
+    </g>
+
+     person 
+    <g transform="translate(40,10)">
+      <circle cx="200" cy="60" r="28" class="person-hair"/>
+      <circle cx="200" cy="66" r="22" fill="#ffd9b6"/>
+      <rect x="150" y="110" width="120" height="100" rx="16" class="person-body"/>
+      <rect x="190" y="190" width="12" height="40" rx="6" fill="#18344a"/>
+      <rect x="230" y="190" width="12" height="40" rx="6" fill="#18344a"/>
+    </g>
+  </g>
+
+   Floating icons (right side) 
+  <g id="icons" class="floating">
+     Arrange icons around the developer 
+     JS 
+    <g id="icon-js" transform="translate(920,200)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text" y="0">JS</text>
+    </g>
+
+     TS 
+    <g id="icon-ts" transform="translate(760,160)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text" y="0">TS</text>
+    </g>
+
+     JSON 
+    <g id="icon-json" transform="translate(620,140)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text small" y="0">JSON</text>
+    </g>
+
+     HTML 
+    <g id="icon-html" transform="translate(980,320)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text small" y="0">HTML</text>
+    </g>
+
+     SASS 
+    <g id="icon-sass" transform="translate(840,360)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text small" y="0">Sass</text>
+    </g>
+
+     CSS 
+    <g id="icon-css" transform="translate(700,300)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text" y="0">CSS</text>
+    </g>
+
+     React 
+    <g id="icon-react" transform="translate(520,240)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text" y="0">React</text>
+    </g>
+
+     Next 
+    <g id="icon-next" transform="translate(520,380)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text small" y="0">Next</text>
+    </g>
+
+     Node 
+    <g id="icon-node" transform="translate(640,420)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text" y="0">Node</text>
+    </g>
+
+     Front end (label) 
+    <g id="icon-frontend" transform="translate(860,480)">
+      <rect class="icon-rect" x="-88" y="-36" width="176" height="72"/>
+      <text class="icon-text small" y="0">Front end</text>
+    </g>
+
+     jest 
+    <g id="icon-jest" transform="translate(980,460)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text small" y="0">jest</text>
+    </g>
+
+     Azure 
+    <g id="icon-azure" transform="translate(420,460)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text small" y="0">Azure</text>
+    </g>
+
+     Git 
+    <g id="icon-git" transform="translate(1010,560)">
+      <rect class="icon-rect" x="-58" y="-36" width="116" height="72"/>
+      <text class="icon-text" y="0">Git</text>
+    </g>
+  </g>
+
+   small connecting dots for depth 
+  <g opacity="0.12" fill="#ffffff">
+    <circle cx="900" cy="250" r="4"/>
+    <circle cx="760" cy="200" r="3.2"/>
+    <circle cx="980" cy="340" r="3.8"/>
+    <circle cx="700" cy="320" r="2.8"/>
+    <circle cx="640" cy="420" r="3.6"/>
+  </g>
+
+  Footer small label 
+  <text x="40" y="860" class="label">SVG gerado — personalize a cor editando --icon-fill no atributo style do &lt;svg&gt;</text>
+</svg>

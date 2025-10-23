@@ -1,0 +1,70 @@
+@use "../../styles/variables" as *;
+
+.skillsSection {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #0d0d1a;
+  color: #fff;
+
+  h2 {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  .card {
+    background: #1a1a28;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px $primary-color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background: $primary-color;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .icon {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #ccc;
+    }
+  }
+}

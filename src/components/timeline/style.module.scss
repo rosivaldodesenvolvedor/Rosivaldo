@@ -1,0 +1,153 @@
+
+@use "../../styles/variables" as *;
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+.timelineSection {
+  background-color: #121212;
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  color: $primary-color;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: $primary-color;
+    transform: translateX(-50%);
+  }
+}
+
+.timelineItem {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+
+  .content {
+    background: #252525;
+    padding: 1rem;
+    border-radius: 6px;
+    border-bottom: 2px solid $primary-color;
+    position: relative;
+
+    .year {
+      display: inline-block;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      padding: 2px 8px;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      border-radius: 4px;
+    }
+
+    p {
+      margin: 4px 0;
+      font-size: 0.9rem;
+    }
+  }
+
+  .iconWrapper {
+    position: absolute;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    background: $primary-color;
+    color: #121212;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 1;
+  }
+}
+
+.left.animate  {
+  left: 0;
+  animation: slideInLeft 0.8s ease-out forwards;
+
+  .iconWrapper {
+    right: -15px;
+  }
+
+  .content {
+    margin-left: auto;
+    text-align: left;
+  }
+}
+
+.right.animate  {
+  left: 50%;
+  animation: slideInRight 0.8s ease-out forwards;
+
+  .iconWrapper {
+    left: -15px;
+  }
+
+  .content {
+    margin-right: auto;
+    text-align: left;
+  }
+}
+
+// Responsivo
+@media screen and (max-width: 768px) {
+
+   .timelineItem {
+    width: 100%;
+    left: 0 !important;
+    padding-top: 2.5rem; // espaço pro ícone acima
+    margin-top: 2.5rem;
+
+    .iconWrapper {
+      top: 0;
+      left: 50% !important;
+      transform: translateX(-50%);
+    }
+
+    .content {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}

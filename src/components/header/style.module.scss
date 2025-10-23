@@ -1,0 +1,82 @@
+@use "../../styles/variables" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(10, 15, 31, 0.95);
+  backdrop-filter: blur(6px);
+
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    text-decoration: none;
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: #6366f1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .menu_toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .mobile_nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(10, 15, 31, 0.95);
+    padding: 1rem 2rem;
+
+    a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      margin-bottom: 1rem;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &.open {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@use "../../styles/variables" as *;
+
+
+.session {
+  scroll-snap-align: start;
+  width: 100%;
+  background: #0e0e17; // fundo escuro
+
+  .hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0 5%;
+    background: #0e0e17; // fundo escuro
+    color: #fff;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    max-width: 600px;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+
+      span {
+        color: $primary-color; 
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #b3b3b3;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
+  }
+
+  .btnPrimary {
+    background: linear-gradient(90deg, #8b5cf6, #6d28d9);
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+  }
+
+  .btnOutline {
+    border: 1px solid $primary-color;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(139, 92, 246, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .avatar:hover {
+    transform: scale(1.1);
+  }
+
+  .avatarBorder {
+    padding: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    display: inline-block;
+  }
+
+  .avatarImg {
+    border-radius: 50%;
+  }
+}

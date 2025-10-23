@@ -1,0 +1,65 @@
+@use "../../styles/variables" as *;
+
+
+.session {
+  width: 100%;
+  background: #0e0e17;
+  padding: 4rem 2rem;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    padding: 0 5%;
+    background: #0e0e17;
+    color: #fff;
+    gap: 3rem;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+  }
+
+  .left {
+    flex: 0.4;
+
+    .heroImage {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+      transition: transform 0.4s ease, filter 0.4s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
+      }
+    }
+  }
+
+  .content {
+    flex: 0.6;
+    max-width: 600px;
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #b3b3b3;
+      line-height: 1.6;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use "../../styles/variables" as *;
+
+
+.contactSection {
+  background-color: #020315;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #ffffff;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    color: $primary-color;
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .contactCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: transform 0.3s;
+    cursor: default;
+
+    .icon_background {
+      display: flex;
+      height: 100px;
+      width: 100px;
+      margin-bottom: 1rem;
+      align-items: center;
+      justify-content: center;
+      background-color: #13131f;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
+      color: #a0a0a0;
+    }
+
+    .icon {
+      color: $primary-color;
+      font-size: 2rem;
+    }
+  }
+}
