@@ -1,0 +1,134 @@
+.header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  background-color: white;
+  transition: all 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity, 1));
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.w-full {
+  width: 100%;
+}
+.z-50 {
+  z-index: 50;
+}
+.top-0 {
+  top: 0px;
+}
+.left-0 {
+  left: 0px;
+}
+.fixed {
+  position: fixed;
+}
+
+@media (min-width: 640px) {
+    .sm\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.max-w-7xl {
+    max-width: 80rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-indigo-600 {
+    --tw-text-opacity: 1;
+    color: rgb(79 70 229 / var(--tw-text-opacity, 1));
+}
+
+.tracking-tight {
+    letter-spacing: -0.025em;
+}
+.font-bold {
+    font-weight: 700;
+}
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+@media (min-width: 768px) {
+    .md\:flex {
+        display: flex;
+    }
+}
+
+/* .hidden {
+    display: none;
+} */
+
+.text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
+
+.font-medium {
+    font-weight: 500;
+}
+.nav-link {
+    transition: color 0.2s, border-bottom 0.2s;
+    padding: 8px 0;
+    margin: 0 16px;
+}
+
+.text-indigo-600:hover {
+    --tw-text-opacity: 1;
+    color: rgb(79 70 229 / var(--tw-text-opacity, 1));
+}
+.nav-link:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
