@@ -3,6 +3,8 @@
 import React, { useEffect } from "react";
 import { createEffect } from "@/utils/createEffect";
 import { FaEnvelope, FaDownload } from "react-icons/fa";
+import Rosivaldo from "@/assets/rosivaldo.jpeg";
+import Image from "next/image";
 import "./inicio.css";
 
 export default function Hero() {
@@ -65,13 +67,18 @@ export default function Hero() {
                   style={{ opacity: "0", transform: "scale(0.9)" }}
                 >
                   {/* Placeholder Imagem Original */}
-                  <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-600 text-sm">
-                    [Foto de perfil Placeholder]
-                  </div>
+                  {/* <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-600 text-sm">
+                   
+                  </div> */}
                   {/* Mantendo as tags originais (ajustadas para Tailwind/melhorias)  */}
-                  {/* <img alt="Foto de perfil" loading="lazy" width="380" height="380" decoding="async" data-nimg="1" className="object-cover w-full h-full" 
-                                        srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FRosivaldo.68e19695.jpg&amp;w=384&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FRosivaldo.68e19695.jpg&amp;w=828&amp;q=75 2x" 
-                                        src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FRosivaldo.68e19695.jpg&amp;w=828&amp;q=75" style={{color: 'transparent'}}> */}
+                  <Image
+                    alt="Foto de perfil"
+                    src={Rosivaldo}
+                    width={380}
+                    height={380}
+                    className="object-cover w-full h-full"
+                    priority={false}
+                  />
                 </div>
               </div>
             </div>
